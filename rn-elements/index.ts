@@ -3,12 +3,13 @@ import { createTheme } from "@rneui/themed";
 // These can all be the same while designs are being worked on
 const lightTheme = createTheme({
   lightColors: {
-    primary: '#006773',
+    primary: '#eb4034',
     background: "#fff",
     background1: "rgba(191, 187, 187, 0.08)",
     stroke:'#ADB5BD',
     stroke1: 'rgba(73, 80, 87, 0.25)',
     text: '#000',
+    title:'#006773',
     tint:'#006773',
     tabIconDefault:'#ccc',
     tabIconSelected:'#006773',

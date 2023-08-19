@@ -66,10 +66,10 @@ const ProfileInfo = () => {
   return (
     <View style={styles.containerStyles}>
       <ProfileCard
-        name="Vladimir Putin"
+        name="Martin Luther King"
         description="Joined in 2000"
         onEdit={handleProfileEdit}
-        profileUrl="https://i2-prod.walesonline.co.uk/news/uk-news/article23927263.ece/ALTERNATES/s1200c/0_F038F02A-D11F-11EC-A042-0A2111BCB09D.jpg"
+        profileUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Martin_Luther_King%2C_Jr..jpg/800px-Martin_Luther_King%2C_Jr..jpg"
       />
       <View
         style={{

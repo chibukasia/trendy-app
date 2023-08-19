@@ -9,8 +9,8 @@ import FilterCard from "../../../components/Molecules/Cards/FilterCard";
 
 const summaries = [
     {
-      imageUri: "https://source.unsplash.com/random?sig=0",
-      title: "Emerging Technologies",
+      imageUri: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+      title: "What you need to know about World Coin",
       summary: `Exploring advancements in fields such as virtual reality and their potential impact on various industries.`,
       comments: [
         {
@@ -60,9 +60,9 @@ const summaries = [
       duration: '5 Minutes ago'
     },
     {
-      imageUri: "https://source.unsplash.com/random?sig=0",
-      title: "Data Privacy and Security",
-      summary: `Examining the implications of data privacy, cybersecurity, and the balance between data protection and innovation.`,
+      imageUri: "https://1.bp.blogspot.com/-kK7Fxm7U9o0/YN0bSIwSLvI/AAAAAAAACFk/aF4EI7XU_ashruTzTIpifBfNzb4thUivACLcBGAsYHQ/s1280/222.jpg",
+      title: "The beauty of nature",
+      summary: `Nature has its own beauty that is fascinating and beyond compare. You must just love the beauty of nature`,
       comments: [
         {
           id: 1,
@@ -111,9 +111,9 @@ const summaries = [
       duration: '5 Days ago'
     },
     {
-      imageUri: "https://source.unsplash.com/random?sig=0",
-      title: "AI in Healthcare",
-      summary: `Exploring the potential applications, benefits, and ethical considerations of AI in the healthcare industry.`,
+      imageUri: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      title: "The top secrets about photographers",
+      summary: `Exploring the universe in a different way, telling the different stories of the universe.`,
       comments: [
         {
           id: 1,
@@ -162,9 +162,9 @@ const summaries = [
       duration: '5 Minutes ago'
     },
     {
-      imageUri: "https://source.unsplash.com/random?sig=0",
-      title: "Social Justice and Equality",
-      summary: `Engaging in conversations about social issues, discrimination, inclusivity, and strategies for promoting equality.`,
+      imageUri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtG_CCF8jisxe87OSuA8x7olnYdLZX4-7_3Dd4lXcxYHGPSq6xs0VOlNoTEd9Lhmb-FL4&usqp=CAU",
+      title: "The new car trends",
+      summary: `Engaging in conversations about new trends in modern cars, and strategies for promoting equality.`,
       comments: [
         {
           id: 1,

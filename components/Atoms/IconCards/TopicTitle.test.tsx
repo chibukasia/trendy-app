@@ -35,7 +35,7 @@ describe('TopicTitle', () => {
 
     expect(container).toBeDefined();
     expect(textElement).toBeDefined();
-    expect(textElement.props.style.color).toBe(lightTheme.lightColors?.primary); 
+    expect(textElement.props.style.color).toBe(lightTheme.lightColors?.title); 
     expect(textElement.props.style.fontSize).toBe(15);
   });
 });

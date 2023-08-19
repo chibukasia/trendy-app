@@ -53,7 +53,7 @@ const Notification = (props: IProps) => {
         </View>
       </View>
       <View style={styles.timelineViewStyles}>
-        <Text style={{fontSize: 15, fontWeight: '400', color: theme.colors.text}}>Poseted: {duration} {duration==='Now'? '': 'ago'}</Text>
+        <Text style={{fontSize: 15, fontWeight: '400', color: theme.colors.text}}>{duration} {duration==='Now'? '': 'ago'}</Text>
       </View>
     </View>
   );
@@ -74,7 +74,9 @@ const useStyles = makeStyles((theme, props) => ({
     flexDirection: "row",
     width: "100%",
   },
-  timelineViewStyles: {},
+  timelineViewStyles: {
+    marginLeft: 70
+  },
   avatarViewStyles: {
     width: "20%",
     display: 'flex',

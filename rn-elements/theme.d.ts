@@ -6,6 +6,7 @@ declare module '@rneui/themed' {
     stroke1: string;
     background1: string;
     text: string;
+    title: string;
     tint: string;
     tabIconDefault: string;
     tabIconSelected: string;

@@ -1,7 +1,6 @@
 import { Avatar } from "@rneui/base";
-import { ThemeProvider, makeStyles } from "@rneui/themed";
+import { makeStyles } from "@rneui/themed";
 import { View, Text } from "react-native";
-import { lightTheme } from "../../../rn-elements";
 
 interface IProps {
   avatar?: string;
@@ -37,7 +36,7 @@ const useStyles = makeStyles((theme, props: IProps) => ({
     gap: 5,
   },
   textStyles: {
-    color: props.color ? props?.color : theme.colors.primary,
+    color: props.color ? props?.color : theme.colors.title,
     fontSize: props.fontSize ? props?.fontSize : 15,
     fontWeight: "700",
   },

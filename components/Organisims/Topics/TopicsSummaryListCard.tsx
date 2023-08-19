@@ -18,7 +18,7 @@ const TopicSummaryListCard = (props: IProps) => {
   const {push} = useRouter()
 
   const handleSeeAll = () => {
-    push({pathname:'(tabs)/(topics)/topic-list', params: {title:title}})
+    push({pathname:'(tabs)/(topics)', params: {title:title}})
   };
   const onSummaryCardPress = () => {};
 
