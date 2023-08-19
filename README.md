@@ -41,3 +41,18 @@ Scan the QR code displayed on the terminal after starting the application. Us th
 NOTE: Some of the commands will require some environment setups, eg, to run the android app using the command provided, you will need android studio installed so that it can run on the emulator. Using expo is the easiest way to have it running. 
 
 ## Sample Screenshots
+### Authentication
+![Screenshot_20230819_134540_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/3e7be87b-a6f6-4332-ab3a-662b9b9ac252)
+![Screenshot_20230819_134424_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/309d6aea-be06-4ff7-87d1-0c81b28fecab)
+### Home
+![Screenshot_20230819_133640_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/99e768ed-e8f6-4c05-ab72-7d89a0f8e4af)
+### Topics
+![Screenshot_20230819_133724_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/6343435e-9c01-44ad-a68e-f0316b5650e1)
+### Profile
+![Screenshot_20230819_134403_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/7bbc617f-06e5-469a-a095-ab02d05ea3f7)
+### Notifications
+![Screenshot_20230819_134335_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/0dd48e32-cfbd-4bd6-84c7-0d6641079c0b)
+![Screenshot_20230819_134351_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/0ddf64c9-79c7-4e2f-b66c-77e6ce1b2c69)
+### Comments And Replies
+![Screenshot_20230819_133816_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/b97be3d4-6617-4ea9-8d67-04dfdeef344a)
+![Screenshot_20230819_133749_Expo Go](https://github.com/chibukasia/trendy-app/assets/39667302/0964166f-686c-41fe-8cf5-17e281f12a74)
