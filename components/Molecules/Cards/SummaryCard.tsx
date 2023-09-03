@@ -18,7 +18,7 @@ const SummaryCard = (props: Props) => {
     <TouchableOpacity onPress={onPress} style={styles.container} testID="summary-card">
     <View style={{ height: "auto", gap: 5, marginBottom: 10,}}>
       <View style={{borderRadius: 15}}>
-        <ImageCard imageUrl={imageUri}/>
+        <ImageCard imageUrl={imageUri} width={160} height={160}/>
       </View>
       <View style={{ gap: 5, }}>
         <Text style={{ fontWeight: "700", fontSize: 14, color: theme.colors.text }}>

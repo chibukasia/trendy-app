@@ -14,7 +14,7 @@ const Index = () => {
     if (!navigationState?.key) return;
 
     if (!isLoggedIn ) {
-      router.replace("/(auth)/login");
+      router.replace("/(tabs)");
       return;
     } else if (isLoggedIn) {
       router.replace("/(tabs)");

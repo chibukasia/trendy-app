@@ -25,7 +25,7 @@ const HomeView = () => {
     setIsVisible(false)
   }
   const handleAddPost=()=>{
-    push('/(topics)')
+    push('/create-post')
   }
 
   const filters = [ "Categories"]

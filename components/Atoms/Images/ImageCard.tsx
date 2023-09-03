@@ -23,7 +23,7 @@ const ImageCard = (props: IProps) => {
           flex: 1,
           aspectRatio: 1,
         }}
-        resizeMode="contain"
+        resizeMode="cover"
         testID="image"
       />
     </View>

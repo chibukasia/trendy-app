@@ -1,5 +1,6 @@
 import { FirebaseApp, getApp, getApps, initializeApp } from "firebase/app";
 import {getAuth, initializeAuth, Auth } from 'firebase/auth';
+import {getStorage} from 'firebase/storage'
 import {API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID} from '@env'
 
 const firebaseConfig = {
@@ -13,6 +14,7 @@ const firebaseConfig = {
 
 let app: FirebaseApp;
 let auth: Auth;
+let storage: Storage
 if (getApps().length < 1) {
   app = initializeApp(firebaseConfig);
   auth = initializeAuth(app);
@@ -21,4 +23,4 @@ if (getApps().length < 1) {
   auth = getAuth(app);
 }
 
-export {app, auth}
+export {app, auth, storage}

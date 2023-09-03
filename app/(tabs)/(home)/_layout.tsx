@@ -7,6 +7,7 @@ const HomeLayout = ()=>{
     return(
         <Stack>
             <Stack.Screen name="index" options={{ headerShown: false }}/>
+            <Stack.Screen name="create-post" options={{ headerTitle:'Create a new post', headerTitleAlign: 'center' }}/>
         </Stack>
     )
 }
