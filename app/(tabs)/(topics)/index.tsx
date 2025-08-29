@@ -1,4 +1,4 @@
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View, Text, FlatList } from "react-native";
 import React from "react";
 import TopicCard from "../../../components/Molecules/Cards/TopicCard";
 import { makeStyles, useTheme } from "@rneui/themed";
@@ -239,21 +239,23 @@ const TopicList = ()=>{
           <View style={styles.header}>
             <Text style={styles.title}>{title?? 'Trending Talks'}</Text>
           </View>
-            <View>
-                {summaries.map((item, index)=>(
-                    <TopicCard 
-                      key={index}
-                      summary={item.summary} 
-                      title={item.title} 
-                      imageUrl={item.imageUri} 
-                      comments={item.comments} 
-                      views={item.views} 
-                      supporters={item.supporters}
-                      updateTopicStats={updateTopicStats}
-                      duration={item.duration}
-                    />
-                ))}
-            </View>
+           
+            <FlatList
+              data={summaries}
+              keyExtractor={(_, index) => index.toString()}
+              renderItem={({ item }) => (
+                <TopicCard 
+                  summary={item.summary} 
+                  title={item.title} 
+                  imageUrl={item.imageUri} 
+                  comments={item.comments} 
+                  views={item.views} 
+                  supporters={item.supporters}
+                  updateTopicStats={updateTopicStats}
+                  duration={item.duration}
+                />
+              )}
+            />
             <BottomSheet isVisible={isVisible} onBackdropPress={onBackdropPress}>
               <FilterCard onDonePress={onDonePress} filters={filters}/>
             </BottomSheet>

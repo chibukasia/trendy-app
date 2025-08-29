@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import PostDetailsCard from "../../Molecules/Cards/PostDetailsCard";
 import { Ionicons } from "@expo/vector-icons";
 import { makeStyles, useTheme } from "@rneui/themed";
@@ -28,7 +28,7 @@ const comments = [
 ];
 const PostDetailsComponent = () => {
   const styles = useStyles();
-  const {theme} = useTheme()
+  const { theme } = useTheme();
 
   const handleEditPost = () => {
     /**
@@ -56,21 +56,19 @@ const PostDetailsComponent = () => {
         <TouchableOpacity onPress={() => null}>
           <View style={styles.swarmActivity}>
             <Ionicons name="stats-chart" size={24} color={theme.colors.text} />
-            <Text style={styles.textStyles}>
-              View Swarm Activity
-            </Text>
+            <Text style={styles.textStyles}>View Post Activity</Text>
           </View>
         </TouchableOpacity>
       </View>
       <View>
         <Text style={styles.textStyles}>Comments</Text>
-        {comments.map((comment, index) => (
-          <AvatarWithText
-            key={index}
-            content={comment.content}
-            avatar={comment.avatar}
-          />
-        ))}
+        <FlatList
+          data={comments}
+          keyExtractor={(_, index) => index.toString()}
+          renderItem={({ item }) => (
+            <AvatarWithText content={item.content} avatar={item.avatar} />
+          )}
+        />
       </View>
       <View style={{ gap: 15 }}>
         <ActionButton fullWidth onPress={handleEditPost}>
@@ -103,8 +101,8 @@ const useStyles = makeStyles((theme) => ({
     paddingVertical: 10,
   },
   textStyles: {
-    fontWeight: "600", 
-    fontSize: 17, 
-    color: theme.colors.text
-  }
+    fontWeight: "600",
+    fontSize: 17,
+    color: theme.colors.text,
+  },
 }));

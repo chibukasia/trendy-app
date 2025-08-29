@@ -21,7 +21,7 @@ const ImageCard = (props: IProps) => {
           width: width ? width : "100%",
           height: height ? height : 160,
           borderRadius: borderRadius ? borderRadius : 5,
-          flex: 1,
+          // flex: 1,
           aspectRatio: 1,
         }}
         resizeMode="cover"

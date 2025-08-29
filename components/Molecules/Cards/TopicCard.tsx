@@ -1,5 +1,10 @@
 import { makeStyles, useTheme } from "@rneui/themed";
-import { View, Text, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  useWindowDimensions,
+} from "react-native";
 import SocialInteraction from "../Social/SocialInteraction";
 import { Feather } from "@expo/vector-icons";
 import ImageCard from "../../Atoms/Images/ImageCard";
@@ -8,6 +13,7 @@ import Comment from "../Topics/Comment";
 import { useState } from "react";
 import AvatarWithText from "../../Atoms/IconCards/AvatarWithText";
 import React from "react";
+import { useRouter } from "expo-router";
 
 interface IProps {
   title: string;
@@ -39,10 +45,12 @@ const TopicCard = (props: IProps) => {
     updateTopicStats,
   } = props;
   const styles = useStyles();
-  const {theme} = useTheme();
+  const { theme } = useTheme();
+  const { width } = useWindowDimensions();
   const [showComments, setShowComments] = useState<boolean>(false);
-  const [showSupporters, setShowSupporters] = useState<boolean>(false)
+  const [showSupporters, setShowSupporters] = useState<boolean>(false);
 
+  const router = useRouter();
   const onReactPress = () => {
     updateTopicStats();
     /**
@@ -61,23 +69,28 @@ const TopicCard = (props: IProps) => {
      * @todo implement logic
      */
   };
-  
-  const onSeeCommentsPress=()=>{
-    setShowComments(!showComments)
-    setShowSupporters(false)
-  }
-  const handleViewSupporters=()=>{
-    setShowSupporters(!showSupporters)
-    setShowComments(false)
-  }
+
+  const onSeeCommentsPress = () => {
+    setShowComments(!showComments);
+    setShowSupporters(false);
+  };
+  const handleViewSupporters = () => {
+    setShowSupporters(!showSupporters);
+    setShowComments(false);
+  };
   return (
     <View>
-      <View style={{gap: 3, paddingVertical: 10,}}>
-        <TopicTitle title={title}/>
-        <Text style={[styles.textStyles, {textAlign: 'justify'}]}>{summary}</Text>
+      <View style={{ gap: 3, paddingVertical: 10 }}>
+        <TopicTitle title={title} />
+        <Text
+          style={[styles.textStyles, { textAlign: "justify" }]}
+          onPress={() => router.push("(tabs)/(topics)/post-details")}
+        >
+          {summary}
+        </Text>
       </View>
       <View style={styles.ImageViewStyles}>
-        <ImageCard imageUrl={imageUrl} />
+        <ImageCard imageUrl={imageUrl} height={width > 450 ? 300 : 200} />
         <View style={styles.countViewStyles}>
           <Text style={styles.textStyles}>{supporters.length} Suppotters</Text>
           <Text>&bull;</Text>
@@ -101,36 +114,52 @@ const TopicCard = (props: IProps) => {
         >
           <TouchableOpacity onPress={onSeeCommentsPress}>
             <View>
-              <Text style={[styles.textStyles, { fontWeight: "400", fontSize: 16 }]}>
+              <Text
+                style={[styles.textStyles, { fontWeight: "400", fontSize: 16 }]}
+              >
                 {comments.length === 0
                   ? "No comments"
                   : comments.length === 1
                   ? "See 1 comment"
-                  : showComments? 'Hide Comments': `See All ${comments.length} comments`}
+                  : showComments
+                  ? "Hide Comments"
+                  : `See All ${comments.length} comments`}
               </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={handleViewSupporters}>
             <View style={styles.supporters}>
               <Feather name="users" size={17} color={theme.colors.text} />
-              <Text style={[styles.textStyles,{ fontWeight: "600", fontSize: 16 }]}>
+              <Text
+                style={[styles.textStyles, { fontWeight: "600", fontSize: 16 }]}
+              >
                 Supporters
               </Text>
             </View>
           </TouchableOpacity>
         </View>
-        { showComments && 
+        {showComments && (
           <View>
-            {comments.map((comment, index)=>(
-              <Comment key={index} avatar={comment.avatar} content={comment.content} />
+            {comments.map((comment, index) => (
+              <Comment
+                key={index}
+                avatar={comment.avatar}
+                content={comment.content}
+              />
             ))}
-          </View>}
-          {showSupporters &&
+          </View>
+        )}
+        {showSupporters && (
           <View>
-            {supporters.map((supporter, index)=>(
-              <AvatarWithText key={index} avatar={supporter.avatar} content={supporter.name} />
+            {supporters.map((supporter, index) => (
+              <AvatarWithText
+                key={index}
+                avatar={supporter.avatar}
+                content={supporter.name}
+              />
             ))}
-          </View>}
+          </View>
+        )}
         <Text style={[styles.textStyles, { fontWeight: "400", fontSize: 13 }]}>
           Poseted: {duration} {duration === "Now" ? "" : "ago"}
         </Text>
@@ -181,6 +210,6 @@ const useStyles = makeStyles((theme, props) => ({
     gap: 5,
   },
   textStyles: {
-    color: theme.colors.text
-  }
+    color: theme.colors.text,
+  },
 }));

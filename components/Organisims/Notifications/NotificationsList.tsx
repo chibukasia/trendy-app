@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, FlatList } from "react-native";
 import { useState } from "react";
 import Notification from "../../Molecules/Cards/Notification";
 import { BottomSheet } from "@rneui/themed";
@@ -9,7 +9,7 @@ import React from "react";
 const notifications = [
   {
     profileUrl:
-      "https://i2-prod.walesonline.co.uk/news/uk-news/article23927263.ece/ALTERNATES/s1200c/0_F038F02A-D11F-11EC-A042-0A2111BCB09D.jpg",
+      "https://i.guim.co.uk/img/media/08cf6b1c88c934efe1a48a95b3449905766facf3/0_60_3571_2142/master/3571.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=40db9be896a784709b2505061faf2da7",
     title: "Social Justice and Equality",
     content: `Trending post from Anonymous lorem ipsum sit ament, consecuter est a, mattis tellus. Sed.`,
     read: false,
@@ -17,7 +17,7 @@ const notifications = [
   },
   {
     profileUrl:
-      "https://i2-prod.walesonline.co.uk/news/uk-news/article23927263.ece/ALTERNATES/s1200c/0_F038F02A-D11F-11EC-A042-0A2111BCB09D.jpg",
+      "https://i.guim.co.uk/img/media/08cf6b1c88c934efe1a48a95b3449905766facf3/0_60_3571_2142/master/3571.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=40db9be896a784709b2505061faf2da7",
     title: "Social Justice and Equality",
     content: `Trending post from Anonymous lorem ipsum sit ament, consecuter est a, mattis tellus. Sed.`,
     read: false,
@@ -25,7 +25,7 @@ const notifications = [
   },
   {
     profileUrl:
-      "https://i2-prod.walesonline.co.uk/news/uk-news/article23927263.ece/ALTERNATES/s1200c/0_F038F02A-D11F-11EC-A042-0A2111BCB09D.jpg",
+      "https://i.guim.co.uk/img/media/08cf6b1c88c934efe1a48a95b3449905766facf3/0_60_3571_2142/master/3571.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=40db9be896a784709b2505061faf2da7",
     title: "Social Justice and Equality",
     content: `Trending post from Anonymous lorem ipsum sit ament, consecuter est a, mattis tellus. Sed.`,
     read: true,
@@ -85,16 +85,19 @@ const NotificationsList = () => {
 
   return (
     <View>
-      {notifications.map((notification, index) => (
+      <FlatList
+      data={notifications}
+      keyExtractor={(_, index) => index.toString()}
+      renderItem={({ item }) => (
         <Notification
-          key={index}
-          title={notification.title}
-          profileUrl={notification.profileUrl}
-          content={notification.content}
-          duration={notification.duration}
+          title={item.title}
+          profileUrl={item.profileUrl}
+          content={item.content}
+          duration={item.duration}
           setIsVisible={setIsVisible}
         />
-      ))}
+      )}
+    />
       {isVisible && (
         <BottomSheet
           modalProps={{}}
