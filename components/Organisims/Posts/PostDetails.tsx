@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { makeStyles, useTheme } from "@rneui/themed";
 import AvatarWithText from "../../Atoms/IconCards/AvatarWithText";
 import ActionButton from "../../Atoms/Buttons/ActionButton";
+import React from "react";
 
 const comments = [
   {
@@ -73,7 +74,7 @@ const PostDetailsComponent = () => {
       </View>
       <View style={{ gap: 15 }}>
         <ActionButton fullWidth onPress={handleEditPost}>
-          Edit Swarm
+          Edit Post
         </ActionButton>
         <ActionButton
           fullWidth
@@ -81,7 +82,7 @@ const PostDetailsComponent = () => {
           color={"#000"}
           onPress={handleDeletePost}
         >
-          Delete Swarm
+          Delete Post
         </ActionButton>
       </View>
     </View>

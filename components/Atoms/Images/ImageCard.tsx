@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import { Image, ImageProps } from "@rneui/base";
+import React from "react";
 
 interface IProps {
   imageUrl: string;

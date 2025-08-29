@@ -2,6 +2,7 @@ import { Button, } from "@rneui/base";
 import { makeStyles, useTheme } from "@rneui/themed";
 import { View, } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import React from "react";
 
 interface IProps{
     onDeleteNotification: ()=>void;

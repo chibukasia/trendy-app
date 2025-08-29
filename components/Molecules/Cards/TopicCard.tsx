@@ -7,6 +7,7 @@ import TopicTitle from "../../Atoms/IconCards/TopicTitle";
 import Comment from "../Topics/Comment";
 import { useState } from "react";
 import AvatarWithText from "../../Atoms/IconCards/AvatarWithText";
+import React from "react";
 
 interface IProps {
   title: string;

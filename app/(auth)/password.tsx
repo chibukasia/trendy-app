@@ -1,6 +1,7 @@
 import { makeStyles, useTheme } from "@rneui/themed";
 import { ScrollView, View, Text } from "react-native";
 import PasswordInput from "../../components/Organisims/Authentication/PasswordInput";
+import React from "react";
 
 const Password = () => {
   const styles = useStyles()

@@ -1,5 +1,6 @@
 import { Avatar, Button, Icon } from "@rneui/base";
 import { makeStyles, useTheme } from "@rneui/themed";
+import React from "react";
 import { useState } from "react";
 import { View, Text } from "react-native";
 

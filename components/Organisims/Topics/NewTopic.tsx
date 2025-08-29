@@ -8,6 +8,7 @@ import { makeStyles } from "@rneui/themed";
 import ActionButton from "../../Atoms/Buttons/ActionButton";
 import * as ImagePicker from 'expo-image-picker';
 import ImageCard from "../../Atoms/Images/ImageCard";
+import React from "react";
 
 const items = [
   { label: "Front-end Developer", value: "FED" },

@@ -14,6 +14,7 @@ import { ThemeProvider, useTheme } from "@rneui/themed";
 import { darkTheme, lightTheme } from "../rn-elements";
 import { StatusBar } from "expo-status-bar";
 import { ActivityIndicator } from "react-native";
+import React from "react";
 
 export {
   // Catch any errors thrown by the Layout component.

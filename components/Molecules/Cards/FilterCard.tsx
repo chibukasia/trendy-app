@@ -2,6 +2,7 @@ import { Switch, makeStyles, useTheme } from "@rneui/themed";
 import { View, Text } from "react-native";
 import ActionButton from "../../Atoms/Buttons/ActionButton";
 import { useState } from "react";
+import React from "react";
 
 interface IProps {
   filters: string[]
@@ -51,7 +52,9 @@ const FilterCard = (props: IProps) => {
       </View>
         ))}       
       </View>
-      <ActionButton onPress={onDonePress} children={"Done"} fullWidth />
+      <ActionButton onPress={onDonePress} fullWidth>
+        Done
+      </ActionButton>
     </View>
   );
 };

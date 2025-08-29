@@ -1,7 +1,8 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import SummaryCard from "../../Molecules/Cards/SummaryCard";
 import { makeStyles } from "@rneui/themed";
 import { useRouter } from "expo-router";
+import React from "react";
 
 interface IProps {
   title: string;
@@ -31,17 +32,19 @@ const TopicSummaryListCard = (props: IProps) => {
             <Text style={styles.textStyles}>See All</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.cards}>
-          {data.map((item, index) => (
-            <SummaryCard
-              key={index}
+
+        <FlatList 
+        horizontal
+
+        contentContainerStyle={{gap: 15}}
+          data={data}
+          renderItem={({item})=> <SummaryCard
               imageUri={item.imageUrl}
               title={item.title}
               summary={item.summary}
               onPress={onSummaryCardPress}
-            />
-          ))}
-        </View>
+            />}
+         />
       </View>
   );
 };
@@ -55,12 +58,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "space-between",
     paddingVertical: 5,
-  },
-  cards: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 13,
   },
   textStyles: {
     color: theme.colors.text

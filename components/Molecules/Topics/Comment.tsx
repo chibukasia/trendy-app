@@ -4,6 +4,7 @@ import { Divider, Icon } from "@rneui/base";
 import { useState } from "react";
 import { useTheme } from "@rneui/themed";
 import ChatInput from "../../Atoms/Inputs/ChatInput";
+import React from "react";
 
 interface IProps{
     avatar: string;

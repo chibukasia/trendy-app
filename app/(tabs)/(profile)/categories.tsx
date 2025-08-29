@@ -2,6 +2,7 @@ import { ScrollView, View } from "react-native";
 import CategoryIconCard from "../../../components/Atoms/IconCards/CategoryIconCard";
 import { Link, useRouter, } from "expo-router";
 import { makeStyles, } from "@rneui/themed";
+import React from "react";
 
 const categories = [
   {

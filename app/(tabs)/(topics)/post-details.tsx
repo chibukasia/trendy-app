@@ -1,4 +1,5 @@
 import { makeStyles, useTheme } from "@rneui/themed";
+import React from "react";
 import { View, Text, ScrollView } from "react-native"; 
 import PostDetailsComponent from "../../../components/Organisims/Posts/PostDetails";
 

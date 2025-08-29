@@ -10,6 +10,7 @@ import ActionButton from "../../Atoms/Buttons/ActionButton";
 import useUserAuth from "../../../hooks/useUserAuth";
 import { useAppDispatch, useAppSelector } from "../../../store";
 import { signUpOrLoginForm } from "../../../store/slices/authSlice";
+import React from "react";
 
 const hasLowercase = (str: string) => /[a-z]/.test(str);
 const hasUppercase = (str: string) => /[A-Z]/.test(str);

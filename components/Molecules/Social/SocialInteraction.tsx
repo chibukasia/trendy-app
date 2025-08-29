@@ -1,6 +1,7 @@
 import { View } from "react-native";
 import SocialInteractionButton from "../../Atoms/Buttons/SocialInteractionButton";
 import { makeStyles } from "@rneui/themed";
+import React from "react";
 
 interface IProps {
     handleReactions: ()=>void;

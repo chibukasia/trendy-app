@@ -2,6 +2,7 @@ import { makeStyles, useTheme } from "@rneui/themed";
 import { View, Text, ScrollView } from "react-native";
 import AuthForm from "../../components/Organisims/Authentication/AuthForm";
 import Logo from "../../components/Atoms/Brand/Logo";
+import React from "react";
 
 const Register = ()=>{
   const styles = useStyles();

@@ -1,6 +1,7 @@
 import { Text, View, } from "react-native";
 import { Button, makeStyles, useTheme } from "@rneui/themed";
 import { FontAwesome5 } from '@expo/vector-icons';
+import React from "react";
 
 interface Props {
     title: string;

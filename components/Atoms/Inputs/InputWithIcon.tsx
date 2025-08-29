@@ -1,5 +1,6 @@
 import { Input, InputProps, } from "@rneui/base";
 import { makeStyles, useTheme } from "@rneui/themed"
+import React from "react";
 import { View } from "react-native";
 
 interface Props extends InputProps{

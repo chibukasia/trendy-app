@@ -1,6 +1,8 @@
 import { ScrollView, } from "react-native";
 import NewTopic from "../../../components/Organisims/Topics/NewTopic";
 import { makeStyles } from "@rneui/themed";
+import React from "react";
+
 
 const CreatePost = ()=>{
     const styles = useStyles()

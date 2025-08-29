@@ -8,6 +8,7 @@ import useUserAuth from "../../../hooks/useUserAuth";
 import { useAppDispatch } from "../../../store";
 import { signUpOrLoginForm } from "../../../store/slices/authSlice";
 import { BackHandler } from 'react-native';
+import React from "react";
 
 const primaryLinks = [
   {

@@ -1,5 +1,6 @@
 import { View } from "react-native";
 import TopicSummaryListCard from "./TopicsSummaryListCard";
+import React from "react";
 
 const data = [
   {
@@ -8,6 +9,11 @@ const data = [
       {
         imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi0ldQfPJxxrLAh1QOa8QNx2FdBUYEne2jEdmWRXgy_Gd91Clw9N08Aoy84iQts3Wt2XQ&usqp=CAU",
         title: "Apples vision pro",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor beatae quaerat in incidunt amet modi",
+      },
+      {
+        imageUrl: "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/141115/creta-exterior-front-view.jpeg?isig=0&q=75",
+        title: "The Hyundai dream",
         summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor beatae quaerat in incidunt amet modi",
       },
       {

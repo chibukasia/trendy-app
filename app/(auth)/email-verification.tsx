@@ -8,6 +8,7 @@ import { useAppSelector } from "../../store";
 import { logout } from "../../store/slices/authSlice";
 import { useState } from "react";
 import { auth } from "../../firebase/firebaseApp";
+import React from "react";
 
 const EmailVerfication = () => {
   const { theme } = useTheme();

@@ -4,6 +4,7 @@ import Notification from "../../Molecules/Cards/Notification";
 import { BottomSheet } from "@rneui/themed";
 import NotificationActions from "../../Molecules/Cards/NotificationActions";
 import { useRouter } from "expo-router";
+import React from "react";
 
 const notifications = [
   {

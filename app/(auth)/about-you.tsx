@@ -9,6 +9,7 @@ import { router, useRouter } from "expo-router";
 import Logo from "../../components/Atoms/Brand/Logo";
 import { auth } from "../../firebase/firebaseApp";
 import { updateProfile } from "firebase/auth";
+import React from "react";
 
 const AboutYou = () => {
   const [fName, setFname] = useState<string>("");

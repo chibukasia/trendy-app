@@ -3,6 +3,7 @@ import InputWithIcon from "../../Atoms/Inputs/InputWithIcon";
 import IconButton from "../../Atoms/Buttons/IconButton";
 import { makeStyles, useTheme } from "@rneui/themed";
 import { Ionicons } from "@expo/vector-icons";
+import React from "react";
 
 interface IProps {
   setIsVisible?: (isVisible: boolean) => void;

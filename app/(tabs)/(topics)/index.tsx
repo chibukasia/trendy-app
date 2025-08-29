@@ -1,4 +1,5 @@
 import { ScrollView, View, Text } from "react-native";
+import React from "react";
 import TopicCard from "../../../components/Molecules/Cards/TopicCard";
 import { makeStyles, useTheme } from "@rneui/themed";
 import SearchAndFilter from "../../../components/Molecules/Topics/SearchAndFilter";

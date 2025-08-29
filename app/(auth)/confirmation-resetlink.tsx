@@ -3,6 +3,7 @@ import ActionButton from "../../components/Atoms/Buttons/ActionButton";
 import { makeStyles, useTheme } from "@rneui/themed";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { router, useLocalSearchParams } from "expo-router";
+import React from "react";
 
 const ConfirmationResetLink = () => {
   const { theme } = useTheme();

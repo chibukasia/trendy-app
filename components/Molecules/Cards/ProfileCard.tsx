@@ -1,5 +1,6 @@
 import { Avatar, Button } from "@rneui/base";
 import { makeStyles, useTheme } from "@rneui/themed";
+import React from "react";
 import { Text, View } from "react-native";
 
 interface IProps {

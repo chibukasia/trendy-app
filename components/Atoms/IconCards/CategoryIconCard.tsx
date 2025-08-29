@@ -1,6 +1,7 @@
 import { TouchableOpacity, View } from "react-native";
 import { Image, Text } from "@rneui/base";
 import {Avatar, makeStyles } from "@rneui/themed";
+import React from "react";
 
 interface Props {
   title?: string;

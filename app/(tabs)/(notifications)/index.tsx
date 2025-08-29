@@ -1,6 +1,8 @@
 import { View, Text, ScrollView } from "react-native";
 import NotificationsList from "../../../components/Organisims/Notifications/NotificationsList";
 import { makeStyles } from "@rneui/themed";
+import React from "react";
+
 
 const Notifications = () => {
   const styles= useStyles();

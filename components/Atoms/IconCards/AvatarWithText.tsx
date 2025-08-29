@@ -1,6 +1,7 @@
 import { makeStyles } from "@rneui/themed";
 import { View, TouchableOpacity, Text } from "react-native";
 import { Avatar } from "@rneui/base";
+import React from "react";
 
 interface IProps {
   content: string;

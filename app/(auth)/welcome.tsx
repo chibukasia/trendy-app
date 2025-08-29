@@ -6,6 +6,7 @@ import Logo from "../../components/Atoms/Brand/Logo";
 import { useAppDispatch } from "../../store";
 import { updateLoginState } from "../../store/slices/authSlice";
 import {router} from 'expo-router'
+import React from "react";
 
 const welcomeInfo = [
   {

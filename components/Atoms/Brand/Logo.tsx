@@ -1,3 +1,4 @@
+import React from "react";
 import { View } from "react-native";
 import { Image } from "@rneui/base";
 import { makeStyles } from "@rneui/themed";

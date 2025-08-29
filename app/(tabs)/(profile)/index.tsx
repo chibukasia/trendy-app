@@ -1,6 +1,7 @@
 import { ScrollView, View } from "react-native";
 import ProfileInfo from "../../../components/Organisims/Profile/ProfileInfo";
 import { makeStyles, } from "@rneui/themed";
+import React from "react";
 
 const Profile = () => {
   const styles = useStyles()

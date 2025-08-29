@@ -2,6 +2,7 @@ import { View } from "react-native";
 import { Input, InputProps } from "@rneui/base";
 import { makeStyles } from "@rneui/themed";
 import { useState } from "react";
+import React from "react";
 
 interface Props extends InputProps{
     placeholder?: string;

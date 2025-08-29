@@ -1,5 +1,6 @@
 import { useTheme } from "@rneui/themed";
 import { Button, ButtonProps, Icon } from "@rneui/base";
+import React from "react";
 
 interface IProps extends ButtonProps{
     title: string;

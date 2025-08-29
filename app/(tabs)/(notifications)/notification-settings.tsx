@@ -1,6 +1,7 @@
 import { ScrollView, View, Text } from "react-native";
 import ToggleField from "../../../components/Atoms/Toggles/ToggleField";
 import { makeStyles, useTheme } from "@rneui/themed";
+import React from "react";
 
 const notifications = [
   {

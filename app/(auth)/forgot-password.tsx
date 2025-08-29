@@ -8,6 +8,7 @@ import { router } from "expo-router";
 import BaseInput from "../../components/Atoms/Inputs/BaseInput";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../../firebase/firebaseApp";
+import React from "react";
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState<string>('');
@@ -46,7 +47,9 @@ const ForgotPassword = () => {
         {error ? <Text style={{color:"red", textAlign:"center", marginTop:10}}>{error}</Text> : null}
       </View>
       <View style={{paddingTop: 30}}>
-        <ActionButton children={'Continue'} fullWidth onPress={handleContinue}/>
+        <ActionButton fullWidth onPress={handleContinue}>
+          Continue
+        </ActionButton>
       </View>
     </ScrollView>
   );

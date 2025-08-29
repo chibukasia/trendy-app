@@ -4,6 +4,7 @@ import ImageCard from "../../Atoms/Images/ImageCard";
 import TopicTitle from "../../Atoms/IconCards/TopicTitle";
 import { makeStyles } from "@rneui/themed";
 import dayjs from "dayjs";
+import React from "react";
 
 interface IProps {
   updateTopicStats: () => void;
